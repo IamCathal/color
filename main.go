@@ -5,7 +5,7 @@ import (
 	"strings"
 )
 
-func ColorText(msg string, modifiers ...string) string {
+func StyledText(msg string, modifiers ...string) string {
 	result := msg
 	if len(modifiers) == 0 {
 		return msg
@@ -64,7 +64,7 @@ func ColorText(msg string, modifiers ...string) string {
 	for _, modifier := range modifiers {
 		lowerCaseModifier := strings.ToLower(modifier)
 		if _, exists := modifierMap[strings.ToLower(lowerCaseModifier)]; exists {
-			result = fmt.Sprintf("%s%s%s", modifierMap[lowerCaseModifier], result, modifierMap["ResetAll"])
+			result = fmt.Sprintf("%s%s%s", modifierMap[lowerCaseModifier], result, modifierMap["resetall"])
 		}
 	}
 
