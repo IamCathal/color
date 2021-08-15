@@ -1,4 +1,4 @@
-package main
+package color
 
 import (
 	"fmt"
@@ -69,4 +69,25 @@ func StyledText(msg string, modifiers ...string) string {
 	}
 
 	return result
+}
+
+func main() {
+	fmt.Println(StyledText("Galahads (black)", "black"), StyledText("Galahads (black,bold)", "bold", "black"))
+	fmt.Println(StyledText("Galahads (black,bold)", "bold", "white"))
+	fmt.Println(StyledText("Galahads (black,bold)", "white"))
+	fmt.Println(StyledText("Galahads (red)", "red"))
+	fmt.Println(StyledText("Galahads (green)", "green"))
+	fmt.Println(StyledText("Galahads (yellow)", "yellow"))
+	fmt.Println(StyledText("Galahads (blue)", "blue"))
+	fmt.Println(StyledText("Galahads (magenta)", "magneta"))
+	fmt.Println(StyledText("Galahads (cyan)", "cyan"))
+	fmt.Println(StyledText("Galahads (lightgray)", "lightgray"))
+	fmt.Println(StyledText("Galahads (darkgray)", "darkgray"))
+	fmt.Println(StyledText("Galahads (lightred)", "lightred"))
+	fmt.Println(StyledText("Galahads (lightgreen)", "lightgreen"))
+	fmt.Println(StyledText("Galahads (lightyellow)", "lightyellow"))
+	fmt.Println(StyledText("Galahads (lightblue)", "lightblue"))
+	fmt.Println(StyledText("Galahads (lightmagenta)", "lightmagenta"))
+	fmt.Println(StyledText("Galahads (lightcyan)", "lightcyan"))
+	fmt.Println(StyledText("Galahads (white)", "white"))
 }
